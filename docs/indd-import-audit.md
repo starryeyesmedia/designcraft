@@ -62,6 +62,8 @@ At review time, open upstream PR [#2774](https://github.com/storytold/designcraf
 - `cargo check --locked -p designcraft-cli` — passed.
 - `cargo test --locked -p designcraft-idml` — passed (216 tests).
 - `cargo build --locked -p designcraft-cli` — passed.
+- `cargo fmt --all -- --check` — passed.
+- `cargo clippy --locked -p designcraft-idml --all-targets -- -D warnings` — passed; Cargo printed existing workspace dependency and patch warnings.
 - `tools/compare.py` — 12 selected pairs, 10 trusted; 99.55% value coverage on trusted pairs.
 - `tools/render_compare.py` — one five-page same-save triple; converter routes pixel-identical on 5/5 pages, with fonts missing for the DesignCraft-to-InDesign comparison.
 - Direct CLI IDML export and rendering comparisons were run for the paired INDD and IDML inputs described above.
